@@ -5,7 +5,7 @@ def create_app(test_config=None):
     # define app instance and default config
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_mapping(
-        SECRET_KEY='dev',
+        SECRET_KEY=os.getenv('SECRET_KEY'),
         DATABASE=os.path.join(app.instance_path, 'obscurew.sqlite') 
     )
 

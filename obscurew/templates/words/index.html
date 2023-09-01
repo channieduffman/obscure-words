@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Obscure Words of Obsession{% endblock %}
+
+{% block content %}
+    <table class="words">
+        {% for word in words %}
+            <tr><td>{{ word.term }} :</td><td>{{ word.meaning }}</td></tr>
+        {% endfor %}
+        <!-- <p>{{ words }}</p> -->
+    </table>
+{% endblock %}
